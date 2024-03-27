@@ -13,11 +13,17 @@ function ResultPanel(response: any) {
   return (
     <div className='ResultPanel'>
     {
-      response?.data.map((prediction: any) => {
+      response?.data.map((prediction: any, index: number) => {
         return (
-          <div>
-            <div>{(-parseFloat(prediction[0])).toFixed(2) + " - " + Utils.flagForNationality(prediction[1]) + " " + prediction[1]}</div>
-          </div>)
+            <div className={index === 0 ? "TopPrediction" : "LesserPrediction"}>
+              {
+                (-parseFloat(prediction[0])).toFixed(2) + 
+                " - " + 
+                Utils.flagForNationality(prediction[1]) + 
+                " " + 
+                prediction[1]
+              }
+            </div>)
       })
     }
     </div>
