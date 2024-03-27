@@ -4,10 +4,7 @@ import Utils from './utils';
 
 function ResultPanel(response: any) {   
   if (response?.data === null) {
-    return (
-      <div>
-        {JSON.stringify(response)}
-      </div>);
+    return (<div/>);
   }
 
   return (
