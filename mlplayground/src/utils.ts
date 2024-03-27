@@ -24,7 +24,7 @@ export default class Utils {
     }
 
     static async getNamePrediction(name: string): Promise<any> {
-        let url = "https://hidden-field-5284.ploomberapp.io/" + name;
+        let url = "https://hidden-field-8363.ploomberapp.io/" + name;
         try {
             const response = await fetch(url, {
                 method: 'GET',
